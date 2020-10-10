@@ -1,29 +1,60 @@
-const { app, BrowserWindow } = require('electron');
+const {
+  app,
+  BrowserWindow,
+  ipcMain
+} = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();
 }
-
+let mainWindow
 const createWindow = () => {
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
 
-  // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, 'index.html'));
+  // 加载本地打包过后的文件
+  mainWindow.loadFile(path.join(__dirname, './dist/index.html'));
+  // 测试
+  // mainWindow.loadURL("http://localhost:8080");
+
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+
+
+
+
+
+  //test
+  ipcMain.on('msg', (event, massage) => {
+    mainWindow.webContents.send('mainMsg', 'ok')
+  })
+
 };
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', createWindow);
+
+
+
+
+
+
+
+
+
+
+
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
