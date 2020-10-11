@@ -8,7 +8,7 @@
 
 ## Overview 概述
 
-此模板没有添加任何的vue插件，并且使用的是最新的 electron-force 模板，您可以访问 https://www.electronforge.io/ 查看更多信息
+此模板没有添加任何的vue插件，并且使用的是最新的 electron-force 模板，您可以访问 https://www.electronforge.io/ 查看更多有关electron-forge的信息
 
 
 
