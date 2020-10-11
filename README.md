@@ -6,25 +6,13 @@
 
 
 
-
-
-
-
 ## Overview 概述
 
-此模板没有添加任何的vue插件，并且使用的是最新的 electron-force 模板，您可以访问 
-
-[electron-force]: https://www.electronforge.io/	"electron-force"
-
-查看更多信息
+此模板没有添加任何的vue插件，并且使用的是最新的 electron-force 模板，您可以访问 https://www.electronforge.io/ 查看更多信息
 
 
 
 如果您有其他需求，您可以在github上提交请求。
-
-
-
-
 
 
 
