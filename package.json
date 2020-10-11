@@ -1,8 +1,8 @@
 {
-  "name": "quick-create-new-vue-electron",
-  "productName": "quick-create-new-vue-electron",
+  "name": "electron-vue-template",
+  "productName": "electron-vue-template",
   "version": "1.0.0",
-  "description": "Your Electron application description",
+  "description": "electron + vue 的快速创建模板",
   "main": "./background.js",
   "scripts": {
     "start": "electron-forge start",
@@ -10,8 +10,8 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "vue:serve": "vue-cli-service serve",
+    "vue:build": "vue-cli-service build"
   },
   "keywords": [],
   "author": {
@@ -22,7 +22,7 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "asar": true 
+        "asar": true
       },
       "makers": [
         {

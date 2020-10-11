@@ -6,12 +6,14 @@ const {
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
+//处理安装与卸载时在Windows上创建与删除快捷方式。
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();
 }
 let mainWindow
 const createWindow = () => {
   // Create the browser window.
+  // 创建浏览器窗口。
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
@@ -20,29 +22,33 @@ const createWindow = () => {
     }
   });
 
-  // 加载本地打包过后的文件
-  mainWindow.loadFile(path.join(__dirname, './dist/index.html'));
-  // 测试
-  // mainWindow.loadURL("http://localhost:8080");
+  // 在最终将vue文件打包过后，注释掉下面开发阶段的代码，并更换上这里的代码
+  // mainWindow.loadFile(path.join(__dirname, './dist/index.html'));
+
+  // 开发阶段请使用下面的方法访问页面
+  mainWindow.loadURL("http://localhost:8080");
 
 
-  // Open the DevTools.
+  // 打开浏览器的 DevTools.
   mainWindow.webContents.openDevTools();
 
 
 
 
 
-  //test
-  ipcMain.on('msg', (event, massage) => {
-    mainWindow.webContents.send('mainMsg', 'ok')
-  })
+  //主进程与渲染进程之间数据传输的测试
+  // ipcMain.on('msg', (event, massage) => {
+  //   mainWindow.webContents.send('mainMsg', 'ok')
+  // })
 
 };
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
+
+// 当Electron完成初始化并准备创建浏览器窗口时，将调用此方法。
+// 有些api只能在此事件发生后使用。
 app.on('ready', createWindow);
 
 

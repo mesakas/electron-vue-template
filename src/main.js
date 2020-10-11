@@ -1,17 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-//you can use window.ipcRenderer any vue component.
-const {
-  ipcRenderer
-} = window.require('electron');
+// 你可以在任何vue组件中，通过window.ipcRenderer的方式访问ipcRenderer中的内容
+const { ipcRenderer } = window.require('electron');
 window.ipcRenderer = ipcRenderer
 
-//test
-window.ipcRenderer.on('mainMsg', (event, msg)=>{
-  console.log(msg);
-})
-window.ipcRenderer.send('msg', 'this is a message')
+
+// 简单的消息传送测试
+// window.ipcRenderer.on('mainMsg', (event, msg) => {
+//   console.log(msg);
+// })
+// window.ipcRenderer.send('msg', 'this is a message')
+
+
+
 
 Vue.config.productionTip = false
 
