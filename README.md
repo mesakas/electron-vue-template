@@ -2,7 +2,7 @@
 
 由于electron-vue停止了更新，导致其中的vue版本和electron版本实在过低，因此我使用 electron-force 和 vue-cli 重新构建了一个最新版本的快速创建模板。
 
-<br><br><br><br>
+<br><br><br>
 
 ## Overview 概述
 
@@ -10,7 +10,7 @@
 
 如果您有其他需求，您可以在github上提交请求。
 
-<br><br><br><br><br>
+<br><br><br>
 
 ## Getting Started 入门
 
@@ -20,7 +20,7 @@
 git clone https://github.com/mesakas/electron-vue-template.git
 ```
 
-  
+  <br>
 
 第二步：
 
@@ -28,7 +28,7 @@ git clone https://github.com/mesakas/electron-vue-template.git
 npm install
 ```
 
-  
+  <br>
 
 然后：
 
@@ -44,8 +44,6 @@ npm run publish
 # 执行打包的任意命令后，程序会自动先将vue打包之后再将electron打包
 ```
 
-
-
-  
+<br>
 
 关于打包的更多内容，请参阅electron-forge https://www.electronforge.io/
