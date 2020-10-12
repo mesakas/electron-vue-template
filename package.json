@@ -7,11 +7,11 @@
   "scripts": {
     "vue:serve": "vue-cli-service serve",
     "vue:build": "vue-cli-service build",
-    "start": "set NODE_ENV=development && electron-forge start",
-    "package": "set NODE_ENV=production && vue-cli-service build && electron-forge package",
-    "make": "set NODE_ENV=production && vue-cli-service build && electron-forge make",
-    "publish": "set NODE_ENV=production && vue-cli-service build && electron-forge publish",
-    "dev": "set NODE_ENV=development && concurrently \"npm run vue:serve\" \"npm run start\" ",
+    "start": "set NODE_ENV=development&& electron-forge start",
+    "package": "set NODE_ENV=production&& vue-cli-service build && electron-forge package",
+    "make": "set NODE_ENV=production&& vue-cli-service build && electron-forge make",
+    "publish": "set NODE_ENV=production&& vue-cli-service build && electron-forge publish",
+    "dev": "set NODE_ENV=development&& concurrently \"npm run vue:serve\" \"npm run start\" ",
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
