@@ -6,6 +6,10 @@
 
 
 
+  
+
+
+
 ## Overview 概述
 
 此模板没有添加任何的vue插件，并且使用的是最新的 electron-force 模板，您可以访问 https://www.electronforge.io/ 查看更多有关electron-forge的信息
@@ -18,6 +22,12 @@
 
 
 
+
+
+
+
+  
+
 ## Getting Started 入门
 
 第一步：
@@ -25,6 +35,16 @@
 ``` 
 git clone https://github.com/mesakas/electron-vue-template.git
 ```
+
+  
+
+第二步：
+
+```
+npm install
+```
+
+  
 
 然后：
 
@@ -41,5 +61,7 @@ npm run publish
 ```
 
 
+
+  
 
 关于打包的更多内容，请参阅electron-forge https://www.electronforge.io/
