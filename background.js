@@ -5,11 +5,15 @@ const {
 } = require('electron');
 const path = require('path');
 
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 //处理安装与卸载时在Windows上创建与删除快捷方式。
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();
 }
+
+
+
 let mainWindow
 const createWindow = () => {
   // Create the browser window.
@@ -22,16 +26,19 @@ const createWindow = () => {
     }
   });
 
-  // 在最终将vue文件打包过后，注释掉下面开发阶段的代码，并更换上这里的代码
-  // mainWindow.loadFile(path.join(__dirname, './dist/index.html'));
 
-  // 开发阶段请使用下面的方法访问页面
-  mainWindow.loadURL("http://localhost:8080");
+
+  // 加载前端页面
+  if (process.env.NODE_ENV == "development") {
+  mainWindow.loadURL("http://localhost:8090");
+  } else {
+  mainWindow.loadFile(path.join(__dirname, './dist/index.html'));
+  }
+
 
 
   // 打开浏览器的 DevTools.
   mainWindow.webContents.openDevTools();
-
 
 
 
@@ -47,14 +54,9 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 
-// 当Electron完成初始化并准备创建浏览器窗口时，将调用此方法。
+// 当 Electron 完成初始化并准备创建浏览器窗口时，将调用此方法。
 // 有些api只能在此事件发生后使用。
 app.on('ready', createWindow);
-
-
-
-
-
 
 
 
@@ -81,3 +83,6 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+
+// 在这个文件中，您可以包含应用程序的其他特定主进程代码。
+// 您还可以将它们放在单独的文件中并在这里导入它们。

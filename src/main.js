@@ -6,6 +6,9 @@ const { ipcRenderer } = window.require('electron');
 window.ipcRenderer = ipcRenderer
 
 
+
+
+
 // 简单的消息传送测试
 // window.ipcRenderer.on('mainMsg', (event, msg) => {
 //   console.log(msg);
