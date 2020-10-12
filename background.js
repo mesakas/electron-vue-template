@@ -29,7 +29,7 @@ const createWindow = () => {
 
 
   // 加载前端页面
-  if (process.env.NODE_ENV == "development") {
+  if (process.env.NODE_ENV === "development") {
   mainWindow.loadURL("http://localhost:8090");
   } else {
   mainWindow.loadFile(path.join(__dirname, './dist/index.html'));
