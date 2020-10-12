@@ -2,31 +2,15 @@
 
 由于electron-vue停止了更新，导致其中的vue版本和electron版本实在过低，因此我使用 electron-force 和 vue-cli 重新构建了一个最新版本的快速创建模板。
 
-
-
-
-
-  
-
-
+<br><br><br><br>
 
 ## Overview 概述
 
 此模板没有添加任何的vue插件，并且使用的是最新的 electron-force 模板，您可以访问 https://www.electronforge.io/ 查看更多有关electron-forge的信息
 
-
-
 如果您有其他需求，您可以在github上提交请求。
 
-
-
-
-
-
-
-
-
-  
+<br><br><br><br><br>
 
 ## Getting Started 入门
 
