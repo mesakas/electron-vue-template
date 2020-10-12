@@ -30,11 +30,16 @@ git clone https://github.com/mesakas/electron-vue-template.git
 
 ``` 
 # 开发阶段
-npm run vue:serve		# 开启vue-cli的调试 
-npm run start		# 开启electron的调试
+npm run dev 	#开启vue-cli-service 和 electron
 
 # 打包
-npm run vue:build		# 打包您的vue代码
-npm run make		# 打包您的整个代码
+npm run package
+npm run make
+npm run publish
+
+# 执行打包的任意命令后，程序会自动先将vue打包之后再将electron打包
 ```
 
+
+
+关于打包的更多内容，请参阅electron-forge https://www.electronforge.io/
